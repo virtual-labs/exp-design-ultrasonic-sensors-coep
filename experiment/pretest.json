@@ -2,38 +2,67 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "What kind of waves does the Ultrasonic Sensor work on?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Gas",
+        "b": "Heat",
+        "c": "Light",
+        "d": "Sound"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+
+	
+    {
+      "question": "What will happen if we supply a voltage of 25V to the Vcc of the Ultrasonic sensor?",
+      "answers": {
+        "a": "Damage is caused",
+        "b": "Sensor will work fine",
+        "c": "Sensor will not respond for the time the voltage is applied",
+        "d": "Sensor will function normally"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
-    },
+    },	
+ 
     {
-      "question": "This is a Sample Question 2?",
+      "question": "When we print out the ultrasonic sensor data, what units are they in?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "inches",
+        "b": "centimeters",
+        "c": "feet",
+        "d": "meters"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+  
+	
+	{
+      "question": "An ultrasonic sensor is a device that can measure the ________ to an object by sending out _________ waves.",
+      "answers": {
+        "a": "density / echo",
+        "b": "distance / sound",
+        "c": "path / seismic",
+        "d": "elevation / sonic"
       },
-      "correctAnswer": "c",
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "The following objects might not be detected by an ultrasonic sensor.",
+      "answers": {
+        "a": "hard objects",
+        "b": "large objects",
+        "c": "small objects",
+        "d": "small objects and absorbent object"
+      },
+      "correctAnswer": "d",
       "difficulty": "beginner"
     }
+	
+ 
   ]
 }

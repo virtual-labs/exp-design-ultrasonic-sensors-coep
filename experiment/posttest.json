@@ -2,38 +2,68 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+	
+      "question": "What is the maximum distance that the Ultrasonic Sensor can detect an object?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "8 cm",
+        "b": "20.21 cm",
+        "c": "200 cm",
+        "d": "9 cm"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
+      "correctAnswer": "c",
       "difficulty": "beginner"
     },
+
+	
     {
-      "question": "This is a Sample Question 2?",
+      "question": "What are the factors that affect the performance of the Ultrasonic Sensor during operation?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Target Object hidden by fog",
+        "b": "Distant Target Object",
+        "c": "Smoke",
+        "d": "Dust"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },	
+ 
+ 
+    {
+      "question": "As the ultrasonic frequency increases",
+      "answers": {
+        "a": "Velocity of sound increases",
+        "b": "Velocity of sound decreases",
+        "c": "Wave length increases",
+        "d": "Wave length decreases"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "Which of the following is true?",
+      "answers": {
+        "a": "Velocity = wavelength/frequency",
+        "b": "Frequency = velocity × wavelength",
+        "c": "Wavelength = velocity/frequency",
+        "d": "Velocity = wavelength/frequency"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "What is the speed of sound at room temperature in air and the lowest sound frequency the human ear can detect?",
+      "answers": {
+        "a": "243 m/s and 20 Hz",
+        "b": "243 m/s and 10 Hz",
+        "c": "343 m/s and 20 Hz",
+        "d": "343 m/s and 20 kHz"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
     }
+	
+ 
   ]
 }
