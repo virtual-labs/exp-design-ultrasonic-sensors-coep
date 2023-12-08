@@ -8,7 +8,7 @@ In addition to sending a pulse, a transducer can receive an echo as well. The tr
 
 Using the room-temperature speed of sound in air, 343 m/s, we can quickly find the distance, keeping in mind that the noise travels in both directions—to and from the target. As a result, we get the following velocity-time equation
 
-	Distance = (Time elapsed * 343)/2
+	Time = (Distance /(Speed of Sound/2)) X 1000
 
 An ultrasonic sensor type flow and level sensor is a non-contact sensor that uses ultrasonic waves to measure the level of liquid or solid materials in a container. 
 
