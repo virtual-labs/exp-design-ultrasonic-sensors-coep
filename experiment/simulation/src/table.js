@@ -92,7 +92,7 @@ function tableCreateLevel(levelMasterJson) {
 		+ '  </table>'
 		+ ' </div>'
 
-	if (tableReading >=2){
+	if (tableReading ==3){
 		tableMainDiv += '<div class="col-sm-12"><button type="button"  class="btn btn-danger btnStyle"  id="finish"  data-toggle="modal" data-target="#selectCheck"  ><b> FINISH </b></button></div>'
 	}
 
