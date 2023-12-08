@@ -1,1 +1,1 @@
-## Design of ultrasonic sensors and its applications.
+## Design of ultrasonic sensors and its application

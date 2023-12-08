@@ -46,7 +46,7 @@
         "a": "Velocity = wavelength/frequency",
         "b": "Frequency = velocity × wavelength",
         "c": "Wavelength = velocity/frequency",
-        "d": "Velocity = wavelength/frequency"
+        "d": "Velocity = wavelength × frequency"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"

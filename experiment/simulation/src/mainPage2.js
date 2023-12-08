@@ -168,7 +168,7 @@ function mainPage2(){
 
 					} else if (id1 == 3)
 					 {
-						$("#modelMsg123").html("<b class='boldTextBlue'>Formula : Distance=Time * (speed of Sound/2)</b> ");
+						$("#modelMsg123").html("<b class='boldTextBlue'>Formula :  Time = (Distance /(Speed of Sound/2)) X 1000</b> ");
 
 						
 					} else {
