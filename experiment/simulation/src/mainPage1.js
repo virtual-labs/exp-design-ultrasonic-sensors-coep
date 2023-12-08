@@ -98,7 +98,9 @@ function mainPage1(){
 				+'</div>'
 				+ '</div>'
 				+ ' </div>'  
-		$("#main-div-conf").html(selection);	
+		$("#main-div-conf").html(selection);
+
+var timeFormula='<img src="images/TimeFormula.png" alt=" " width="350" height="50">'	;		
 		id=0;
      $("#checkAsnTime").click(function() {
 			 $("#frequency").children(":selected").css("background-color","#f7dddd");
@@ -133,7 +135,7 @@ function mainPage1(){
 
 					} else if (id == 3)
 					 {
-						$("#modelMsg123").html("<b class='boldTextBlue'>Formula : Time = (Distance /(Speed of Sound/2)) X 1000 </b> ");
+						$("#modelMsg123").html("<b class='boldTextBlue'>Formula : "+timeFormula+" </b> ");
 
 						
 					} else {

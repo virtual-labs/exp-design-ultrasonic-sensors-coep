@@ -9,9 +9,8 @@
 - Click on "CHECK CONFIGURATION" button.
 - Use the formula and calculate time (ms) and click on submit button.
 
-	Time = (Distance /(Speed of Sound/2)) X 1000
+	Time = [(Distance * 2) /Speed of Sound] X 1000
 	
-
 - You need to take 5 readings (calculations) by selecting different configurations (frequency, distance).
 - After completing 5 readings, click on "GO FOR LEVEL MEASUREMENT" button.
 

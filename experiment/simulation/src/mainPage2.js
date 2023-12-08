@@ -137,7 +137,7 @@ function mainPage2(){
 
 	
 	});
-
+var timeFormula11='<img src="images/TimeFormula.png" alt=" " width="350" height="50">'	;
 	 id1=0;
      $("#submitTimeforL").click(function() {
 			
@@ -168,7 +168,7 @@ function mainPage2(){
 
 					} else if (id1 == 3)
 					 {
-						$("#modelMsg123").html("<b class='boldTextBlue'>Formula :  Time = (Distance /(Speed of Sound/2)) X 1000</b> ");
+						$("#modelMsg123").html("<b class='boldTextBlue'>Formula : "+timeFormula11+"</b> ");
 
 						
 					} else {
