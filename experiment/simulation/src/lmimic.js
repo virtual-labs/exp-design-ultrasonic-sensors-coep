@@ -75,8 +75,11 @@ function lmimic(tankHSelect,waterLevelPercent){
 	var waves;
 	var waveflag=0;
 	var wavesUP,wavesDOWN;
-	var HVal= paper.text((x1+290),(y1-5),"H "+H).attr({'font-size':20,'stroke':'#11c9f2'});
-	
+	var HVal= paper.text((x1-60),(y1+172),"H "+H).attr({'font-size':20,'stroke':'#11c9f2'});
+	var HVal2= paper.path('M'+(x1-60)+' '+(y1-1)+'l -10 0 l 20 0 l -10 0 l 0 162 '
+					 +'M'+(x1-60)+' '+(y1+350)+'l -10 0 l 20 0 l -10 0 l 0 -167 '
+	).attr({'stroke-width':2});
+	//350
 	tankDesign();
 	
 	var d1,d2;
@@ -161,7 +164,7 @@ function lmimic(tankHSelect,waterLevelPercent){
 		Waterfill_arr[1].animate({path :'M' +(x1+125)+ ' ' +(y1+350)+ 'l 0 '+(-Wlevel)+''},time, function(){
 //			console.log("Wlevel value = "+Wlevel);
 				d1.attr({'fill':'red'});
-				var levelValW= paper.text((x1+335),(upWaveY),"Water Level "+waterPercent+" %").attr({'font-size':20,'stroke':'#11c9f2'});
+				var levelValW= paper.text((x1+340),(upWaveY)," Water Level "+waterPercent+" %").attr({'font-size':20,'stroke':'#11c9f2'});
 					alert("Now click on START button");
 	//			$("#canvas-btndiv").prop("hidden", false);
 			});

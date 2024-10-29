@@ -1,25 +1,35 @@
 ### Procedure
 
 ##### Prerequisite : 
-- Answer all the questions and click on "Submit Test" button.
-- Click on next level button which will appear in place of submit button below the test.
+- Answer all the questions and click on "Submit Test" button
+- Click on next level button which will appear in place of submit button below the test
 
 ##### Simulator :
-- Select frequency, distance, and fluid type. 
-- Click on "CHECK CONFIGURATION" button.
-- Use the formula and calculate time (ms) and click on submit button.
+1. Select frequency, distance, and fluid type
+
+2. Click on "CHECK CONFIGURATION" button
+
+3. Use the formula and calculate time (ms) and click on submit button
 
 	Time = [(Distance * 2) /Speed of Sound] X 1000
 	
-- You need to take 5 readings (calculations) by selecting different configurations (frequency, distance).
-- After completing 5 readings, click on "GO FOR LEVEL MEASUREMENT" button.
+4. You need to take 5 readings (calculations) by selecting different configurations (frequency, distance)
+
+5. After completing 5 readings, click on "GO FOR LEVEL MEASUREMENT" button
 
 ##### Level mesurement
-- Select Tank Height (cm), and water level for level measurement.
-- Click on "CHECK CONFIGURATION" button.
-- Click on "Inlet" Valve to fill the water in tank.
-- Click on " START" button.
-- Enter Calculated time in textbox and click on "SUBMIT" button.
-- Click on "STOP" button given on mimic frame.
-- Repeat above steps and take 4 readings.
-- Click on FINISH button.
+6. Select Tank Height (cm), and water level for level measurement
+
+7. Click on "CHECK CONFIGURATION" button
+
+8. Click on "Inlet" Valve to fill the water in tank
+
+9. Click on " START" button
+
+10. Enter Calculated time in textbox and click on "SUBMIT" button
+
+11. Click on "STOP" button given on mimic frame
+
+12. Repeat above steps and take 4 readings
+
+13. Click on FINISH button
