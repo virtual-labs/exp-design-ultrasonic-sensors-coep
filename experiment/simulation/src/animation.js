@@ -8,6 +8,7 @@ var calculateTime;
 var ArrayJson=[];
 var TimeMasterJson={};
 function animation(frequencySelect,distSelect,fluidSelect){
+	startTimer();
 	$("#canvas-div").html('');	
     $("#centerText1").html('WORKING OF ULTRASONIC SENSOR ');
     $("#centerText2").html('CONFIGURATION');
@@ -54,34 +55,83 @@ if(distanceInput==2){
 	var txt=paper.text((x+300), (y-10),"Transmit / Receive").attr({'font-size':25,'stroke':'#800000'});
 	var US_txt=paper.text((x+70), (y+290),"Ultrasonic Sensor").attr({'font-size':25,'stroke':'#189AB4'});
     var objec_txt=paper.text((x+500), (y+200),"Object").attr({'font-size':25,'stroke':'#189AB4'});
+		var mimic_T1=document.getElementById('hour').innerText = returnData(hour);
+	  	 var mimic_T2=document.getElementById('minute').innerText = returnData(minute);
+	  	 var mimic_T3=document.getElementById('second').innerText = returnData(second);
+	  	 timeOfMimic= mimic_T1+":"+mimic_T2+":"+mimic_T3;
+	//  	 addToTimerMasterJson();
+	  	 console.log("Mimic Type1 : "+mimic_T1+":"+mimic_T2+":"+mimic_T3);
+		 reset();
+	
 }else if(distanceInput==50){
 	var USworking=paper.image("images/ultrasonic1.gif", (x+120), (y+10),500, 380);
 	var txt=paper.text((x+300), (y-10),"Transmit / Receive").attr({'font-size':25,'stroke':'#800000'});
 	var US_txt=paper.text((x+70), (y+290),"Ultrasonic Sensor").attr({'font-size':25,'stroke':'#189AB4'});
     var objec_txt=paper.text((x+550), (y+200),"Object").attr({'font-size':25,'stroke':'#189AB4'});
+	var mimic_T1=document.getElementById('hour').innerText = returnData(hour);
+		  	 var mimic_T2=document.getElementById('minute').innerText = returnData(minute);
+		  	 var mimic_T3=document.getElementById('second').innerText = returnData(second);
+		  	 timeOfMimic= mimic_T1+":"+mimic_T2+":"+mimic_T3;
+		//  	 addToTimerMasterJson();
+		  	 console.log("Mimic Type1 : "+mimic_T1+":"+mimic_T2+":"+mimic_T3);
+			 reset();
+	
+	
 }else if(distanceInput==100){
 	var USworking=paper.image("images/ultrasonic1.gif", (x+70), (y-60), 600, 450);
 	var txt=paper.text((x+300), (y-10),"Transmit / Receive").attr({'font-size':25,'stroke':'#800000'});
 	var US_txt=paper.text((x+70), (y+290),"Ultrasonic Sensor").attr({'font-size':25,'stroke':'#189AB4'});
     var objec_txt=paper.text((x+550), (y+200),"Object").attr({'font-size':25,'stroke':'#189AB4'});
+	var mimic_T1=document.getElementById('hour').innerText = returnData(hour);
+		  	 var mimic_T2=document.getElementById('minute').innerText = returnData(minute);
+		  	 var mimic_T3=document.getElementById('second').innerText = returnData(second);
+		  	 timeOfMimic= mimic_T1+":"+mimic_T2+":"+mimic_T3;
+		//  	 addToTimerMasterJson();
+		  	 console.log("Mimic Type1 : "+mimic_T1+":"+mimic_T2+":"+mimic_T3);
+			 reset();
 	
 }else if(distanceInput==200){
 	var USworking=paper.image("images/ultrasonic1.gif", (x+20), (y-140), 750, 550);
 	var txt=paper.text((x+300), (y-50),"Transmit / Receive").attr({'font-size':25,'stroke':'#800000'});
 	var US_txt=paper.text((x+70), (y+290),"Ultrasonic Sensor").attr({'font-size':25,'stroke':'#189AB4'});
     var objec_txt=paper.text((x+590), (y+200),"Object").attr({'font-size':25,'stroke':'#189AB4'});
+	var mimic_T1=document.getElementById('hour').innerText = returnData(hour);
+		  	 var mimic_T2=document.getElementById('minute').innerText = returnData(minute);
+		  	 var mimic_T3=document.getElementById('second').innerText = returnData(second);
+		  	 timeOfMimic= mimic_T1+":"+mimic_T2+":"+mimic_T3;
+		//  	 addToTimerMasterJson();
+		  	 console.log("Mimic Type1 : "+mimic_T1+":"+mimic_T2+":"+mimic_T3);
+			 reset();
+	
 	
 }else if(distanceInput==300){
 	var USworking=paper.image("images/ultrasonic1.gif", (x-30), (y-140), 900, 550);
 	var txt=paper.text((x+300), (y-50),"Transmit / Receive").attr({'font-size':25,'stroke':'#800000'});
 	var US_txt=paper.text((x+50), (y+290),"Ultrasonic Sensor").attr({'font-size':25,'stroke':'#189AB4'});
     var objec_txt=paper.text((x+650), (y+200),"Object").attr({'font-size':25,'stroke':'#189AB4'});
+	var mimic_T1=document.getElementById('hour').innerText = returnData(hour);
+		  	 var mimic_T2=document.getElementById('minute').innerText = returnData(minute);
+		  	 var mimic_T3=document.getElementById('second').innerText = returnData(second);
+		  	 timeOfMimic= mimic_T1+":"+mimic_T2+":"+mimic_T3;
+		//  	 addToTimerMasterJson();
+		  	 console.log("Mimic Type1 : "+mimic_T1+":"+mimic_T2+":"+mimic_T3);
+			 reset();
+	
+	
 }else{
 
 	var USworking=paper.image("images/ultrasonic1.gif", (x-90), (y-140), 1100, 550);
 	var txt=paper.text((x+300), (y-50),"Transmit / Receive").attr({'font-size':25,'stroke':'#800000'});
 	var US_txt=paper.text((x+30), (y+290),"Ultrasonic Sensor").attr({'font-size':25,'stroke':'#189AB4'});
 	var objec_txt=paper.text((x+710), (y+200),"Object").attr({'font-size':25,'stroke':'#189AB4'});
+	var mimic_T1=document.getElementById('hour').innerText = returnData(hour);
+		  	 var mimic_T2=document.getElementById('minute').innerText = returnData(minute);
+		  	 var mimic_T3=document.getElementById('second').innerText = returnData(second);
+		  	 timeOfMimic= mimic_T1+":"+mimic_T2+":"+mimic_T3;
+		//  	 addToTimerMasterJson();
+		  	 console.log("Mimic Type1 : "+mimic_T1+":"+mimic_T2+":"+mimic_T3);
+			 reset();
+	
 }
 $("#timeAnswer").prop('hidden',false);
 

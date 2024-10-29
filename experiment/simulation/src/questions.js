@@ -1,4 +1,10 @@
 
+var counterArrayJson=[];
+		var counterMasterJson ={};
+		var totalQues=5;
+		var correctAnswer=0;			
+			var bKnowledgeTime="";
+			var answerTotCount;
 			var flag = false;
 			var myRadio = null;
 			data = {};
@@ -113,8 +119,11 @@
 						}
 						dataQues.corrAns = ansCount;
 						 data.corrAns = dataQues;
-					//	 console.log(data);
 						 
+					//	 console.log(data);
+					answerTotCount=ansCount;
+					correctAnswer=ansCount;
+					console.log(correctAnswer+", correctAnsQues= "+answerTotCount); 
 						 $("#modelMsg").html("<b class='boldTextGreen'>Test Submitted Successfully .<br> Number of Correct Answers  : " + ansCount+"</b>");
                          $('#nextLevelConfig').prop('hidden',false);
 						 
@@ -123,8 +132,21 @@
 		   			
 					}
 					
-					$('#nextLevelConfig').on('click', function() {	
-						 
+		$('#nextLevelConfig').on('click', function() {	
+			var Bk_T1=document.getElementById('hour').innerText = returnData(hour);
+							var Bk_T2=document.getElementById('minute').innerText = returnData(minute);
+							var Bk_T3=document.getElementById('second').innerText = returnData(second);
+							bKnowledgeTime= Bk_T1+":"+Bk_T2+":"+Bk_T3;
+			//				addToTimerMasterJson();
+			//				console.log("Basic Knowledge Time : "+bKnowledgeTime);
+
+							var tempCountJson ={};
+							tempCountJson.correctAnswer = correctAnswer; 
+							tempCountJson.totalQues = totalQues; 
+							counterMasterJson.questionary = tempCountJson;
+
+
+							reset();	 
 	      if(ansCount != 0){
 		
 				$("#main-div-conf").html("");

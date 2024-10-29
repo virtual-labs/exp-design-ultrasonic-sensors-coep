@@ -1,4 +1,10 @@
-var ArrayJson=[];
+
+var cntSubmitConfigPg2=0;
+tableReading=0;
+var cntCalculateMainPage2=0;
+var cntCalMain2ArrayJson=[];
+var cntCalMain2MasterJson={};
+
 function mainPage2(){
 	
 //	console.log("MAIN PAGE 2");
@@ -47,12 +53,12 @@ function mainPage2(){
 	   +'<label class="labelstyle">Calculate Time (ms): </label>'
 	   +'</div>'
 	   +'<div class="col-sm-3">'
-	   +'<input type="text" id="CalTimeforL" style= "padding: 10px;width:100%;"  class=" form-control" />'
+	   +'<input type="number" id="CalTimeforL" style= "padding: 10px;width:100%;"  class=" form-control" />'
 	   +'</div>'
 	   +'<div class="col-sm-3">'
 	   +'<button type="button"  "  class="btn btn-danger btnStyle" id="submitTimeforL" data-toggle="modal" data-target="#selectCheck" ><b>SUBMIT</b></button>'
 	   +'</div>'
-	   +'</div>'
+	   +'</div> <br>'
 
 
 	   			+ ' <!-- Modal -->'
@@ -94,7 +100,8 @@ function mainPage2(){
 	}
     
      $("#submitconfigL").click(function() {
-				 $("#submitconfigL").prop('disabled',true);
+			cntSubmitConfigPg2++;
+			$("#submitconfigL").prop('disabled',true);
 			var slider = document.getElementById("myRange");
 		 	var waterLevelPercent = document.getElementById("demo");
 		 	waterLevelPercent.innerHTML = slider.value;
@@ -152,12 +159,16 @@ var timeFormula11='<img src="images/TimeFormula.png" alt=" " width="350" height=
 					{
 					if (id1 <= 2) {
 						if (flowAns == calculateTimeForLvl) {
-							$("#modelMsg123").html("done ");
+							if(tableReading >=3){}else{
+								$("#modelMsg123").html("<b class='boldTextGreen'>Correct Answer. Select another configuration</b>");
+							}	
+							//$("#modelMsg123").html("<b class='boldTextGreen'>Correct Answer. Select another configuration.</b>");
 							$("#timeAnswerLvl").prop('hidden',true);
 							id1=0;
 							
 							addToLevelMasterJSON();
 							$("#CalTimeforL").val('');
+							
 							
 						} else if (flowAns != calculateTimeForLvl) {
 					$("#modelMsg123").html("<b class='boldTextRed'>Entered value is incorrect.Try again .</b> ");
@@ -175,8 +186,10 @@ var timeFormula11='<img src="images/TimeFormula.png" alt=" " width="350" height=
 						flowAns = $("#CalTimeforL").val();
 //						flow = flowAns.toFixed(2);
 						if (flowAns == calculateTimeForLvl) {
-							
-							$("#modelMsg123").html("<b class='boldTextGreen'>Correct Answer</b>");
+							if(tableReading >=3){}else{
+								$("#modelMsg123").html("<b class='boldTextGreen'>Correct Answer. Select another configuration</b>");
+							}
+							//$("#modelMsg123").html("<b class='boldTextGreen'>Correct Answer. Select another configuration.</b>");
 							$("#timeAnswerLvl").prop('hidden',true);
 							
 							addToLevelMasterJSON();
@@ -190,13 +203,26 @@ var timeFormula11='<img src="images/TimeFormula.png" alt=" " width="350" height=
 						}
 					}
 					id1++;
+					cntCalculateMainPage2++;
 					}
 					
 //					
 				}); 
 	 
-	 
-	 
-	 
 	             
 }
+
+function addToCntCalMain22MasterJson(){
+ 			var cntCalMain22tempJson={};
+				cntCalMain22tempJson.cntSubmitConfigPg2= cntSubmitConfigPg2;
+				cntCalMain22tempJson.cntCalculateMainPage2=cntCalculateMainPage2;
+//			let lastEntry2 = cntCalMain1ArrayJson[cntCalMain1ArrayJson.length - 1] || {cntCalculateMainPage2: 0 };
+//			cntCalMain22tempJson.cntCalculateMainPage2 = lastEntry2.cntCalculateMainPage2 + cntCalculateMainPage2; // Add the new count			  
+//            cntCalMain22tempJson.cntSubmitConfigPg2 = lastEntry2.cntSubmitConfigPg2 + cntSubmitConfigPg2; // Add the new count
+   			cntCalMain2ArrayJson.push(cntCalMain22tempJson);
+			counterMasterJson.cntCalMain2MasterJson = cntCalMain2ArrayJson;
+		
+						
+
+}
+
