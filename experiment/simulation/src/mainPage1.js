@@ -1,5 +1,13 @@
+
+var type1Config="";
 tableReading=0;
+var cntSubmitConfig=0;
+var cntCalMain1ArrayJson=[];
+var cntCalMain1MasterJson={};
+var cntCalculateMainPage=0;
+
 function mainPage1(){
+	startTimer();
 	$("#main-div-conf").html('');	
      $("#canvas-div").html('');	
      
@@ -7,14 +15,14 @@ function mainPage1(){
       $("#centerText2").html('CONFIGURATION');
       var htm = '<img src="images/ultraWorking.png" class="img-fluid" >'
       $("#canvas-div").html(htm);
-//      animation();
+
       var selection  ='<div class="row"><div class="col-sm-6" >'
        +'<label class="labelstyle"> Select Frequency (KHz) : </label>'   
        +'</div>'
        +'<div class="col-sm-6">'
 	   +'<select  class="form-control selectConf" id="frequency"  style="height:auto;">'
 	   +'<option value="0">--- Select Frequency --- </option>'
-	   	+'<option value="30" >30</option>'
+	   +'<option value="30" >30</option>'
 	   +'<option value="100">100</option>'
 	   +'<option value="200">200</option>'
 	   +'<option value="300">300</option>'
@@ -35,10 +43,10 @@ function mainPage1(){
 	   +'<option value="0">--- Select distance --- </option>'
 	   +'<option value="2" >2</option>'
 	   +'<option value="50">50</option>'
-	    +'<option value="100">100</option>'
-	     +'<option value="200">200</option>'
-	     +'<option value="300">300</option>'
-	     +'<option value="400">400</option>'
+	   +'<option value="100">100</option>'
+	   +'<option value="200">200</option>'
+	   +'<option value="300">300</option>'
+	   +'<option value="400">400</option>'
 
 	   +'</select>'
 	   +'</div>'
@@ -57,24 +65,26 @@ function mainPage1(){
 	   +'</div>'
 	   +'</div>'
 	   +'<br>' 
-   +'<div class="col-sm-12" id="buttonDiv">'
-	   +'<button type="button" style="padding: 10px; "  class="btn btn-danger btnStyle" id="submitconfig" data-toggle="modal" data-target="#selectCheck" ><b>  CHECK CONFIGURATION </b></button>' 
+ 	  +'<div class="col-sm-12" id="buttonDiv">'
+	   +'<button type="button" style="padding: 10px; "  class="btn btn-danger btnStyle" id="submitconfig" data-toggle="modal" data-target="#selectCheck" ><b>CHECK CONFIGURATION </b></button>' 
 	    +'</div>'
-
+		+'<br>' 
       +'<br>' 
-      +'<br>' 
+       
      
-+'<div class="row" id="timeAnswer" hidden>'
+		+'<div class="row" id="timeAnswer" hidden>'
 	   +'<div class="col-sm-6">'
 	   +'<label class="labelstyle">Calculate Time (ms): </label>'
 	   +'</div>'
 		+'<div class="col-sm-3">'
-	+'<input type="text" id="CalTime" style= "padding: 10px;width:100%;"  class=" form-control" />'
+	+'<input type="number" id="CalTime" style= "padding: 10px;width:100%;"  class=" form-control" />'
 	   +'</div>'
 	   +'<div class="col-sm-3">'
 	+'<button type="button"  "  class="btn btn-danger btnStyle" id="checkAsnTime" data-toggle="modal" data-target="#selectCheck" ><b>SUBMIT </b></button>'
 	   +'</div>'
 	    +'</div>'
+		
+		
 	    
 	        
       
@@ -101,8 +111,9 @@ function mainPage1(){
 		$("#main-div-conf").html(selection);
 
 var timeFormula='<img src="images/TimeFormula.png" alt=" " width="350" height="50">'	;		
-		id=0;
+		id=0; 
      $("#checkAsnTime").click(function() {
+		
 			 $("#frequency").children(":selected").css("background-color","#f7dddd");
 			 $("#distance").children(":selected").css("background-color","#f7dddd");
 				$("body").css("padding","0px 0px 0px 0px");
@@ -111,7 +122,7 @@ var timeFormula='<img src="images/TimeFormula.png" alt=" " width="350" height="5
 		
 				if(flowAns==""){
 					
-					$("#modelMsg123").html("<b class='boldTextRed'>Enter numeric value ");
+					$("#modelMsg123").html("<b class='boldTextRed'>Enter numeric value");
 					
 					
 				}
@@ -119,12 +130,22 @@ var timeFormula='<img src="images/TimeFormula.png" alt=" " width="350" height="5
 					{
 					if (id <= 2) {
 						if (flowAns == calculateTime) {
-							$("#modelMsg123").html("done ");
+							if(tableReading2 >=5){}else{
+								$("#modelMsg123").html("<b class='boldTextGreen'>Correct Answer. Select another configuration</b>");
+							}						
 							$("#timeAnswer").prop('hidden',true);
 							id=0;
 							
 							addToMasterJSON();
 							$("#CalTime").val('');
+							$("#frequency").prop("selectedIndex", 0);
+							$("#distance").prop("selectedIndex", 0);
+							$("#fluidType").prop("selectedIndex", 0);
+							$("#frequency").prop('disabled',false);
+							$("#distance").prop('disabled',false);
+							$("#fluidType").prop('disabled',false);	
+							$("#submitconfig").prop('disabled',false);
+
 							
 						} else if (flowAns != calculateTime) {
 					$("#modelMsg123").html("<b class='boldTextRed'>Entered value is incorrect.Try again .</b> ");
@@ -142,13 +163,22 @@ var timeFormula='<img src="images/TimeFormula.png" alt=" " width="350" height="5
 						flowAns = $("#CalTime").val();
 //						flow = flowAns.toFixed(2);
 						if (flowAns == calculateTime) {
-							
-							$("#modelMsg123").html("<b class='boldTextGreen'>Correct Answer</b>");
+							if(tableReading2 >=5){}else{
+								$("#modelMsg123").html("<b class='boldTextGreen'>Correct Answer. Select another configuration</b>");
+							}	
+							//$("#modelMsg123").html("<b class='boldTextGreen'>Correct Answer. Select another configuration</b>");
 							$("#timeAnswer").prop('hidden',true);
-							
+							$("#frequency").prop("selectedIndex", 0);
+							$("#distance").prop("selectedIndex", 0);
+							$("#fluidType").prop("selectedIndex", 0);
+							$("#frequency").prop('disabled',false);
+							$("#distance").prop('disabled',false);
+							$("#fluidType").prop('disabled',false);	
+							$("#submitconfig").prop('disabled',false);
 							addToMasterJSON();
 							$("#CalTime").val('');
 							id=0;
+							
 //					$("#submitconfig").prop('disabled',false);
 						} else {
 
@@ -156,6 +186,7 @@ var timeFormula='<img src="images/TimeFormula.png" alt=" " width="350" height="5
 						}
 					}
 					id++;
+					cntCalculateMainPage++;
 					}
 					
 //					
@@ -164,10 +195,13 @@ var timeFormula='<img src="images/TimeFormula.png" alt=" " width="350" height="5
 //    var pipeSizeSelect,angleSelect,flowRateSelect,fluidSelect,distSelect;
     $("#frequency, #distance").change(function(){
 		$("#submitconfig").prop('disabled',false);
+		
+		
 	})
     
     
      $("#submitconfig").click(function(){
+		cntSubmitConfig++;
 	 	frequencySelect=$("#frequency").val();
 		  distSelect=$("#distance").val();
 		  fluidSelect=$("#fluidType").val();
@@ -192,9 +226,9 @@ var timeFormula='<img src="images/TimeFormula.png" alt=" " width="350" height="5
 	}else{
 		$("#errorPanel").prop("hidden",true);
 		$("#modelMsg123").html("<b class='boldTextGreen'>Configured Successfully</b>");		
-		$("#pipeSizeSelect").prop('hidden',true);
-		$("#fluidSelect").prop('disabled',true);
-		$("#distSelect").prop('disabled',true);	
+		$("#frequency").prop('disabled',true);
+		$("#distance").prop('disabled',true);
+		$("#fluidType").prop('disabled',true);	
 	$("#submitconfig").prop('disabled',true);
 		   distanceBlock =$("#distance").children(":selected").attr("value");
 //		   console.log("distanceBlock" +distanceBlock);	  
@@ -205,6 +239,16 @@ var timeFormula='<img src="images/TimeFormula.png" alt=" " width="350" height="5
 //		   $("#frequency option[value="+frequencyBlock+"]").attr("disabled",true); 
 		   
 		  animation(frequencySelect,distSelect,fluidSelect);
+		  var mainPg_T1=document.getElementById('hour').innerText = returnData(hour);
+		    		var mainPg_T2=document.getElementById('minute').innerText = returnData(minute);
+		    		var mainPg_T3=document.getElementById('second').innerText = returnData(second);
+		    		console.log("MainPage Type1 : "+mainPg_T1+":"+mainPg_T2+":"+mainPg_T3);
+		    		
+		    		type1Config= mainPg_T1+":"+mainPg_T2+":"+mainPg_T3;
+		  //  	 	addToTimerMasterJson();
+		    		
+		  		reset(); 
+				
 	}	
 
 
@@ -216,5 +260,18 @@ var timeFormula='<img src="images/TimeFormula.png" alt=" " width="350" height="5
 	             
 }
 
+function addToCntCalMain1MasterJson(){
+ 			var cntCalMain1tempJson={};
+				cntCalMain1tempJson.cntSubmitConfig= cntSubmitConfig;
+				cntCalMain1tempJson.cntCalculateMainPage=cntCalculateMainPage;
+//			let lastEntry1 = cntCalMain1ArrayJson[cntCalMain1ArrayJson.length - 1] || {cntCalculateMainPage: 0 };
+//			cntCalMain1tempJson.cntCalculateMainPage = lastEntry1.cntCalculateMainPage + cntCalculateMainPage; // Add the new count			  
+//            cntCalMain1tempJson.cntSubmitConfig = lastEntry1.cntSubmitConfig + cntSubmitConfig; // Add the new count
+   			cntCalMain1ArrayJson.push(cntCalMain1tempJson);
+			counterMasterJson.cntCalMain1MasterJson = cntCalMain1ArrayJson;
+		
+						
+
+}
 
 

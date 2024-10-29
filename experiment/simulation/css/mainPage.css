@@ -1,3 +1,31 @@
+.FirstRowtimer{
+	background: #325359;
+	margin-top:10px;
+	margin-bottom: 10px;
+	text-align: center;	
+	font-weight: bold;
+	font-size: 16px;
+	font-weight: bold;
+    padding:5px;
+    color:#fff;
+    border-radius: 5px;
+	
+}
+.timer{
+/* 	margin-top:10px; */
+	background: rgb(125,176,169);
+	background: linear-gradient(90deg, rgba(125,176,169,1) 0%, rgba(62,183,166,1) 31%, rgba(7,95,83,1) 100%);
+	border-top: 4px solid #2a333c;
+	border-right: 2px solid #2a333c;
+	text-align: center;	
+	font-weight: bold;
+	font-size: 16px;
+    padding: 5px 5px 5px 5px;
+    color:#fff;
+    border-radius: 5px;
+    }
+
+
 .slidecontainer {
   width: 80%;
 /*   margin-left:20px; */
