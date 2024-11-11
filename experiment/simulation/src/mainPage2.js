@@ -50,7 +50,7 @@ function mainPage2(){
        +'<br>'       
 	   +'<div class="row" id="timeAnswerLvl" hidden>'
 	   +'<div class="col-sm-6">'
-	   +'<label class="labelstyle">Calculate Time (ms): </label>'
+	   +'<label class="labelstyle">Calculate Time of flight(ms): </label>'
 	   +'</div>'
 	   +'<div class="col-sm-3">'
 	   +'<input type="number" id="CalTimeforL" style= "padding: 10px;width:100%;"  class=" form-control" />'
@@ -101,6 +101,7 @@ function mainPage2(){
     
      $("#submitconfigL").click(function() {
 			cntSubmitConfigPg2++;
+			 $("#centerText2").html('APPLICATION');
 			$("#submitconfigL").prop('disabled',true);
 			var slider = document.getElementById("myRange");
 		 	var waterLevelPercent = document.getElementById("demo");
