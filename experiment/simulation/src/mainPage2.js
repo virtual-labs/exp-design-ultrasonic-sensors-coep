@@ -13,8 +13,8 @@ function mainPage2(){
      $("#tableDesign").html("");
     
       $("#centerText1").html('LEVEL MEASUREMENT DIAGRAM');
-      $("#centerText2").html('CONFIGURATION');
-      var htm = '<center><img src="images/Ultrasonic_Level_Sensor.png" class="img-fluid" style="width:55%; height="50%;" ></center>'
+      $("#centerText2").html('APPLICATION');
+      var htm = '<center><img src="images/ultrasonic_mod.png" class="img-fluid" style="width:55%; height="50%;" ></center>'
       $("#canvas-div").html(htm);
       var selection  ='<div class="row"><div class="col-sm-6" >'
        +'<label class="labelstyle"> Select Tank Height (cm): </label>'   
@@ -144,7 +144,7 @@ function mainPage2(){
 
 	
 	});
-var timeFormula11='<img src="images/TimeFormula.png" alt=" " width="350" height="50">'	;
+var timeFormula11='<img src="images/ultrasonicTimeUpdated.png" alt=" " width="350" height="50">'	;
 	 id1=0;
      $("#submitTimeforL").click(function() {
 			
