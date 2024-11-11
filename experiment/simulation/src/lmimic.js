@@ -14,7 +14,7 @@ function lmimic(tankHSelect,waterLevelPercent){
 	//$("#main-div-conf").html('');	
     $("#canvas-div").html('');	
     $("#centerText1").html('LEVEL MEASUREMENT MIMIC');
-    $("#centerText2").html('CONFIGURATION');
+    $("#centerText2").html('APPLICATION');
 	$("#canvas-btndiv").prop("hidden", false);
 	$('#canvas-div').removeAttr('width');
 	$('#canvas-div').removeAttr('height');
