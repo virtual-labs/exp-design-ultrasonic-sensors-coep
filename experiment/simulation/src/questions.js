@@ -147,13 +147,13 @@ var counterArrayJson=[];
 
 
 							reset();	 
-	      if(ansCount != 0){
+//	      if(ansCount != 0){
 		
 				$("#main-div-conf").html("");
 	             $("#canvas-div").html("");
 				mainPage1();
 //				  mimic();
-	} 
+//	} 
 	});	
 					
 });

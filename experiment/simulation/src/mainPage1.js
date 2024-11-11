@@ -74,7 +74,7 @@ function mainPage1(){
      
 		+'<div class="row" id="timeAnswer" hidden>'
 	   +'<div class="col-sm-6">'
-	   +'<label class="labelstyle">Calculate Time (ms): </label>'
+	   +'<label class="labelstyle">Calculate Time of flight (ms): </label>'
 	   +'</div>'
 		+'<div class="col-sm-3">'
 	+'<input type="number" id="CalTime" style= "padding: 10px;width:100%;"  class=" form-control" />'
