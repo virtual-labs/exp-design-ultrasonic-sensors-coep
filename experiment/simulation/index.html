@@ -21,6 +21,52 @@
 <!-- 		<link rel="stylesheet" href="css/analysis.css"> -->
 </head>
 
+<style>
+
+.button1 {
+  background-color: #004A7F;
+  -webkit-border-radius: 10px;
+  border-radius: 5px;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial;
+  font-size: 15px; 
+  text-align: center;
+  text-decoration: none;
+  -webkit-animation: glowing 1500ms infinite;
+  -moz-animation: glowing 1500ms infinite;
+  -o-animation: glowing 1500ms infinite;
+  animation: glowing 1500ms infinite;
+}
+@-webkit-keyframes glowing {
+  0% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #B20000; }
+  50% { background-color: #FF0000; -webkit-box-shadow: 0 0 20px #FF0000; }
+  100% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #B20000; }
+}
+
+@-moz-keyframes glowing {
+  0% { background-color: #B20000; -moz-box-shadow: 0 0 3px #B20000; }
+  50% { background-color: #FF0000; -moz-box-shadow: 0 0 40px #FF0000; }
+  100% { background-color: #B20000; -moz-box-shadow: 0 0 3px #B20000; }
+}
+
+@-o-keyframes glowing {
+  0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+  50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
+  100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+}
+
+@keyframes glowing {
+  0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+  50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
+  100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+}
+
+
+</style>
+
 <body bgproperties="fixed">
 
 <header>
@@ -51,6 +97,18 @@
 <!--   <p>Value: <span id="demo"></span></p> -->
 <!-- </div> -->
 
+<div class="row " >
+<div class="col-sm-10">
+</div>
+<div class="col-sm-2">
+<button type="button" class="btn btn-danger"   id = "pdfDownload" hidden>
+	  Download Report
+	 
+	</button>
+</div>
+</div>
+
+
 <div  class=" container-fluid" > 
  <div class="row FirstRowtimer " id="selectMethod" >
       <div class="col-sm-8">
@@ -66,14 +124,49 @@
 <!--	   </select>         -->
 <!--      </div>-->
       <div class="col-sm-2">
-      <button type="button" class="btn btn-danger" id="procedure" data-toggle="modal" data-target="#readProcedureModal"><b>READ PROCEDURE</b></button> 
+      <button type="button" class="btn btn-danger button1" id="btnForModal" data-toggle="modal" data-target="#readProcedureModal"><b>Procedure</b></button> 
  	  </div>
+	 
+	  <div class="col-sm-2">
+      <button type="button" class="btn btn-danger" id="simDemo" data-toggle="modal" data-target="#readProcedureModal1"><b>Simulation Demo</b></button> 
+ 	  </div>
+	 
 	 
  	  <div class="col-sm-2" style="margin-top: 10px;margin-bottom: 10px" hidden>
  		<span  id="hour" class="timer">00</span>:<span id="minute" class="timer">00</span>:<span class="timer" id="second">00</span> 	     	
  	  </div>    
  </div> 
 </div>
+
+
+
+
+  <div id="readProcedureModal1" class="modal fade" role="dialog">
+  <div class="modal-dialog  modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title12" style="color:#fff;">DEMO</h3>
+<!--         <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+      </div>
+      <div class="modal-body12">
+ 
+
+<center><video id="simVideo" width="90%" controls>
+    <source src="images/simulation.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video></center>
+  
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 
 <div id="readProcedureModal" class="modal fade" role="dialog">
   <div class="modal-dialog  modal-lg">
@@ -97,11 +190,11 @@
  <ol>
 	<li>	Select frequency, distance, and fluid type</li> 
 	<li> Click on "CHECK CONFIGURATION" button</li>
-	<li> Use the formula and calculate time (ms) and click on submit button</li>
+	<li> Use the formula and calculate time of flight (ms) and click on submit button</li>
 	<b> Formula: Time = [(Distance * 2) /Speed of Sound] X 1000	</b> <br>	
-	<li> You need to take 5 readings (calculations) by selecting different configurations (frequency, distance and fluid type)</li>
-	<li> After completing 5 readings, click on "GO FOR LEVEL MEASUREMENT" button.</li>
-	<li><b>Configuration for level mesurement:</b> Select Tank Height (cm), and water level for level measurement</li>
+	<li> You need to take 6 readings (calculations) by selecting different configurations (frequency, distance and fluid type)</li>
+	<li> After completing 6 readings, click on "GO FOR LEVEL MEASUREMENT" button.</li>
+	<li><b>Configuration for level measurement:</b> Select Tank Height (cm), and water level for level measurement</li>
 	<li>Click on "CHECK CONFIGURATION" button</li>
 
 </ol>
@@ -198,21 +291,30 @@ Copyrights &copy; COEP - Virtual Lab
 </body>
 
 <!-- https://code.jquery.com/jquery-3.5.1.js -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="lib/jquery.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
 <script type="text/javascript" src="lib/raphael.js"></script>
 <script type="text/javascript" src="lib/raphael.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!--   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  
+<!--   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script> -->
+  
+<!--   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  
+  <script type="text/javascript" src="src/bootstrap.min.js"></script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js"></script>
 
-<script src="https://code.highcharts.com/stock/highstock.js"></script>
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
-<script src="https://code.highcharts.com/modules/offline-exporting.js"></script>
-<script src="https://code.highcharts.com/modules/export-data.js"></script>
-<script src="https://code.highcharts.com/modules/series-label.js"></script>
-<script src="https://code.highcharts.com/modules/data.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
 
 <script type="text/javascript" src="src/questionJson.js"></script>
 <script type="text/javascript" src="src/questions.js"></script>
@@ -226,6 +328,54 @@ Copyrights &copy; COEP - Virtual Lab
 <script type="text/javascript" src="src/timer.js"></script>
 <script type="text/javascript" src="src/analysis.js"></script>
 
+
+<script>
+$('#readProcedureModal1').click(function(){
+	 $('video').each(function(){
+		    $(this).get(0).pause();
+		  })
+	})
+
+$("#simDemo").on("click", function(){
+	
+	var video = document.getElementById("simVideo");
+
+	// Define the start and end skip times (in seconds)
+	var skipStart = 0;  // Skip the first 5 seconds
+	var skipEnd = 7;    // Skip the last 5 seconds
+
+//	video.onloadedmetadata = function() { 
+	    // Get the duration of the video
+	    var videoDuration = video.duration;
+
+	    // Ensure the video plays between skipStart and (duration - skipEnd)
+	    video.currentTime = skipStart;
+
+	    // Event listener to pause the video when it reaches the end limit (video duration - skipEnd)
+	    video.ontimeupdate = function() {
+	        if (video.currentTime >= videoDuration - skipEnd) {
+	            video.pause();
+				video.currentTime = skipStart;
+	        }
+	    };
+
+	    // Prevent seeking outside the allowed time range
+	    video.addEventListener('seeking', function(event) {
+	        // If seeking before the start time or after the allowed end time, reset the current time
+	        if (video.currentTime < skipStart) {
+	            video.currentTime = skipStart;
+	        } else if (video.currentTime > videoDuration - skipEnd) {
+	            //video.currentTime = videoDuration - skipEnd;
+				video.currentTime = skipStart;
+	        }
+	    });
+//	};
+	
+	video.play();
+})
+
+
+</script>
 
 
 </html>
