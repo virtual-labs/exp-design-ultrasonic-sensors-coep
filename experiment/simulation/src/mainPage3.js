@@ -165,7 +165,7 @@ function mainPage3(){
 
 					} else if (id == 4)
 					 {
-						$("#modelMsg123").html("<b class='boldTextBlue'>Formula : Distance=Time * (speed of Sound/2)</b> ");
+						$("#modelMsg123").html("<b class='boldTextBlue'>Formula : <br>Distance = Time * (speed of Sound/2)</b> ");
 
 						
 					} else {
@@ -173,7 +173,7 @@ function mainPage3(){
 //						flow = flowAns.toFixed(2);
 						if (flowAns == calculateTime) {
 							
-							$("#modelMsg123").html("<b class='boldTextGreen'>Correct Answer</b>");
+							$("#modelMsg123").html("<b class='boldTextGreen'>Correct answer</b>");
 							$("#timeAnswer").prop('hidden',true);
 							
 							addToMasterJSON();
@@ -182,7 +182,7 @@ function mainPage3(){
 					
 						} else {
 
-							 $("#modelMsg123").html("<b class='boldTextBlue'>Correct Answer is  " +calculateTime+'</b>');
+							 $("#modelMsg123").html("<b class='boldTextBlue'>Correct answer is  " +calculateTime+'</b>');
 						}
 					}
 					id++;
@@ -238,7 +238,7 @@ function mainPage3(){
 		$("#modelMsg123").html("<b class='boldTextRed'>Select Distance </b>");
 	}else{
 		$("#errorPanel").prop("hidden",true);
-		$("#modelMsg123").html("<b class='boldTextGreen'>Configured Successfully</b>");		
+		$("#modelMsg123").html("<b class='boldTextGreen'>Configured successfully</b>");		
 		$("#pipeSizeSelect").prop('hidden',true);
 		$("#angleSelect").prop('disabled',true);
 		$("#flowRateSelect").prop('disabled',true);

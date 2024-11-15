@@ -7,38 +7,38 @@ QuestionsJSON = {
 				"QUES": [{
 					
   
-					"QC": "Ultrasonic frequencies are above",
+					"QC": "Where is ultrasonic sensing technology commonly applied?",
 					"ANS": [{
-						"ANSID": false,
-						"content": "25k Hertz"
-					}, {
 						"ANSID": true,
-						"content": "20k Hertz"
+						"content": "Automotive and industrial sectors"
 					}, {
 						"ANSID": false,
-						"content": "15k Hertz"
+						"content": "Food coloring"
+					}, {
+						"ANSID": false,
+						"content": "Radio broadcasting"
 					},{
 						"ANSID": false,
-						"content": "10k Hertz"
+						"content": "Heating systems"
 					}]
 				}]
 			}, {
 
 				"QUES": [{
 					
-					"QC": "Ultrasonic sensor is an electronic device used to ___.",
+					"QC": "Which of the following is an advantage of using ultrasonic sensors?",
 					"ANS": [{
 						"ANSID": false,
-						"content": "measure height"
+						"content": "Limited detection range"
 					}, {
 						"ANSID": false,
-						"content": "measure time"
+						"content": "Ability to detect only opaque objects"
 					}, {
 						"ANSID": true,
-						"content": "measure distance"
+						"content": "Versatility and accuracy"
 					}, {
 						"ANSID": false,
-						"content": "measure speed"
+						"content": "High energy consumption"
 					}]
 					
 				}]
@@ -46,19 +46,19 @@ QuestionsJSON = {
 
 				"QUES": [{
 					
-					"QC": "Ultrasonic waves are a form of _______ waves.",
+					"QC": "Ultrasonic sensors are particularly helpful in detecting which of the following in medical devices?",
 					"ANS": [{
 						"ANSID": false,
-						"content": "ocean"
+						"content": "Temperature changes"
 					}, {
 						"ANSID": true,
-						"content": "sound"
+						"content": "Blockages and leaks"
 					}, {
 						"ANSID": false,
-						"content": "radio"
+						"content": "Magnetic fields"
 					}, {
 						"ANSID": false,
-						"content": "seismic"
+						"content": "Electrical conductivity"
 					}]
 					
 				}]
@@ -66,19 +66,19 @@ QuestionsJSON = {
 
 				"QUES": [{
 					
-					"QC": "What is the use of the Ultrasonic Sensor?",
+					"QC": "Which factor must be considered when installing an ultrasonic level sensor?",
 					"ANS": [{
+						"ANSID": false,
+						"content": "Sensor angle"
+					}, {
+						"ANSID": false,
+						"content": "Block distance"
+					}, {
+						"ANSID": false,
+						"content": "Liquid roughnes"
+					}, {
 						"ANSID": true,
-						"content": "Proximity Detection"
-					}, {
-						"ANSID": false,
-						"content": "Humidity Detection"
-					}, {
-						"ANSID": false,
-						"content": "Image Processing"
-					}, {
-						"ANSID": false,
-						"content": "GPS"
+						"content": "All of the above"
 					}]
 					
 				}]
@@ -86,19 +86,19 @@ QuestionsJSON = {
 
 				"QUES": [{
 					
-					"QC": "Sound waves are",
+					"QC": "How do ultrasonic sensors measure the height or level of liquid in a tank?",
 					"ANS": [{
+						"ANSID": false,
+						"content": "By direct contact with the liquid"
+					}, {
 						"ANSID": true,
-						"content": "Longitudinal"
+						"content": "By measuring the time of flight of reflected pulses"
 					}, {
 						"ANSID": false,
-						"content": "Transverse"
+						"content": "By measuring liquid temperature"
 					}, {
 						"ANSID": false,
-						"content": "Partly longitudinal and partly transverse"
-					}, {
-						"ANSID": false,
-						"content": "Sometimes longitudinal and sometimes transverse"
+						"content": "By changing the color of the liquid"
 					}]
 					
 				}]
