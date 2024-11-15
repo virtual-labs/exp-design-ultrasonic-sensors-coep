@@ -131,7 +131,7 @@ var timeFormula='<img src="images/TimeFormula.png" alt=" " width="350" height="5
 					if (id <= 2) {
 						if (flowAns == calculateTime) {
 							if(tableReading2 >=5){}else{
-								$("#modelMsg123").html("<b class='boldTextGreen'>Correct Answer. Select another configuration</b>");
+								$("#modelMsg123").html("<b class='boldTextGreen'>Correct answer. Select another configuration</b>");
 							}						
 							$("#timeAnswer").prop('hidden',true);
 							id=0;
@@ -164,7 +164,7 @@ var timeFormula='<img src="images/TimeFormula.png" alt=" " width="350" height="5
 //						flow = flowAns.toFixed(2);
 						if (flowAns == calculateTime) {
 							if(tableReading2 >=5){}else{
-								$("#modelMsg123").html("<b class='boldTextGreen'>Correct Answer. Select another configuration</b>");
+								$("#modelMsg123").html("<b class='boldTextGreen'>Correct answer. Select another configuration</b>");
 							}	
 							//$("#modelMsg123").html("<b class='boldTextGreen'>Correct Answer. Select another configuration</b>");
 							$("#timeAnswer").prop('hidden',true);
@@ -182,7 +182,7 @@ var timeFormula='<img src="images/TimeFormula.png" alt=" " width="350" height="5
 //					$("#submitconfig").prop('disabled',false);
 						} else {
 
-							 $("#modelMsg123").html("<b class='boldTextBlue'>Correct Answer is  " +calculateTime+'</b>');
+							 $("#modelMsg123").html("<b class='boldTextBlue'>Correct answer is  " +calculateTime+'</b>');
 						}
 					}
 					id++;
@@ -225,7 +225,7 @@ var timeFormula='<img src="images/TimeFormula.png" alt=" " width="350" height="5
 		$("#modelMsg123").html("<b class='boldTextRed'>Select Fluid Type </b>");
 	}else{
 		$("#errorPanel").prop("hidden",true);
-		$("#modelMsg123").html("<b class='boldTextGreen'>Configured Successfully</b>");		
+		$("#modelMsg123").html("<b class='boldTextGreen'>Configured successfully</b>");		
 		$("#frequency").prop('disabled',true);
 		$("#distance").prop('disabled',true);
 		$("#fluidType").prop('disabled',true);	

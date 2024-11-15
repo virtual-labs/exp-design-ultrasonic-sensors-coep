@@ -18,15 +18,15 @@
 5. After completing 6 readings, click on "GO FOR LEVEL MEASUREMENT" button
 
 ##### Level mesurement
-6. Select Tank Height (cm), and water level for level measurement
+6. Select tank height (cm), and water level for level measurement
 
 7. Click on "CHECK CONFIGURATION" button
 
-8. Click on "Inlet" Valve to fill the water in tank
+8. Click on "Inlet" valve to fill the water in tank
 
 9. Click on " START" button
 
-10. Enter Calculated time in textbox and click on "SUBMIT" button
+10. Enter calculated time in textbox and click on "SUBMIT" button
 
 11. Click on "STOP" button given on mimic frame
 

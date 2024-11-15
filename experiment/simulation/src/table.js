@@ -28,7 +28,7 @@ function tableCreate(masterJson) {
 	tableMainDiv += ' </tbody>'
 		+ '  </table>'
 		+ ' </div>'
-	console.log("tableReading2 : " +tableReading2);
+	//console.log("tableReading2 : " +tableReading2);
 	if (tableReading2 >=5){
 		tableMainDiv += '<div class="col-sm-12"><button type="button"    class="btn btn-danger btnStyle" id="levelM"  ><b>GO FOR LEVEL MEASUREMENT </b></button></div> <br><br><br><br><br><br>'
 	}
@@ -98,9 +98,9 @@ function tableCreateLevel(levelMasterJson) {
 	tableMainDiv += ' </tbody>'
 		+ '  </table>'
 		+ ' </div>'
-console.log("tableReading : " +tableReading);
+//console.log("tableReading : " +tableReading);
 	if (tableReading >= 3){
-		console.log("table.....")
+		//console.log("table.....")
 		tableMainDiv += '<div class="col-sm-12"><button type="button"  class="btn btn-danger btnStyle"  id="finish"  data-toggle="modal" data-target="#selectCheck"  ><b> RESULT</b></button></div><br><br><br><br>'
 	}
 

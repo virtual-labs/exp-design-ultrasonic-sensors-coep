@@ -1,6 +1,6 @@
 function resultAnalysis(counterMasterJson){
 	    
-		console.log("ResultPage Analysis.......");
+		//console.log("ResultPage Analysis.......");
 				
 $("#selectMethod").prop('hidden',true);
 
@@ -101,58 +101,58 @@ counterMasterJson = {
 var correctVal = (answerTotCount/5).toFixed(2);
 var quesPercent1 = (correctVal*100).toFixed(1);
 var quesPercent = parseFloat(quesPercent1);
-console.log(quesPercent);
+//console.log(quesPercent);
 
 //configuration
 var correctValConfigType11 = (10/((counterMasterJson.cntCalMain1MasterJson.cntSubmitConfig)+(counterMasterJson.cntCalMain2MasterJson.cntSubmitConfigPg2))).toFixed(2);
 var configPercent1 = (correctValConfigType11*100).toFixed(1);
 var configPercent = parseFloat(configPercent1);
-console.log(configPercent);
+//console.log(configPercent);
 
 //type1 Configuration
 //configuration
 var correctValConfigTypeA = (6/(counterMasterJson.cntCalMain1MasterJson.cntSubmitConfig)).toFixed(2);
 var configPercent12 = (correctValConfigTypeA*100).toFixed(1);
 var configPercentT1 = parseFloat(configPercent12);
-console.log(configPercentT1);
+//console.log(configPercentT1);
 
 //type2 Configuration
 //configuration
 var correctValConfigTypeB = (4/(counterMasterJson.cntCalMain2MasterJson.cntSubmitConfigPg2)).toFixed(2);
 var configPercent22 = (correctValConfigTypeB*100).toFixed(1);
 var configPercentT2 = parseFloat(configPercent22);
-console.log(configPercentT2);
+//console.log(configPercentT2);
 
 //mimic
 var correctValMimic = (5/5).toFixed(2);
 var mimicPercent1 = (correctValMimic*100).toFixed(1);
 var mimicPercent = parseFloat(mimicPercent1);
-console.log(mimicPercent);
+//console.log(mimicPercent);
 
 //Calculation
 var correctValCalculation = (30/((counterMasterJson.cntCalMain1MasterJson.cntCalculateMainPage)+(counterMasterJson.cntCalMain2MasterJson.cntCalculateMainPage2))).toFixed(2);
 var CalculationPercent1 = (correctValCalculation*100).toFixed(1);
 var CalculationPercent = parseFloat(CalculationPercent1);
-console.log(CalculationPercent);
+//console.log(CalculationPercent);
 
 //Calculation typeA
 var correctValCalculation11 = (6/counterMasterJson.cntCalMain1MasterJson.cntCalculateMainPage).toFixed(2);
 var CalculationPercentT1 = (correctValCalculation11*100).toFixed(1);
 var CalculationPercentA = parseFloat(CalculationPercentT1);
-console.log(CalculationPercentA);
+//console.log(CalculationPercentA);
 
 //Calculation typeB
 var correctValCalculationB1 = (4/counterMasterJson.cntCalMain2MasterJson.cntCalculateMainPage2).toFixed(2);
 var CalculationPercentB1 = (correctValCalculationB1*100).toFixed(1);
 var CalculationPercentB = parseFloat(CalculationPercentB1);
-console.log(CalculationPercentB);
+//console.log(CalculationPercentB);
 
 
 //Observation
 var correctValObsevation = (5/5).toFixed(2);
 var observationPercent1 = (correctValObsevation*100).toFixed(1);
 var observationPercent = parseFloat(observationPercent1);
-console.log(observationPercent);
+//console.log(observationPercent);
 
 var htm=''
 		
@@ -162,7 +162,7 @@ var htm=''
 
 		+'<div class="col-md-12">'
 		+' <div class="panel remarkBground" >'
-		+' <div class="panel-body remark" ><center>Experiment completed successfully!!</center></div>'
+		+' <div class="panel-body remark" ><center>Ultrasonic sensor experiment completed successfully!!</center></div>'
 		+'</div>'
 		+'</div>'
 		
@@ -176,14 +176,14 @@ var htm=''
 		 +'<br><table class="table table-bordered ">'
 		   +'  <thead class="thead-dark">'
 		   +'    <tr class="">'
-		   +'     <th><center class="">PHASES OF ULTRASONIC SENSOR </center></th>'
+		   +'     <th><center class="">COMPETENCY ( WORKING ) </center></th>'
 		   +'     <th><center class="">STATUS</center></th>'
 //		   +'	  <th><center class="">TIME</center></th>'
 		   +'    </tr>'
 		   +' </thead>'
 		   +'  <tbody>'
 		   +'   <tr>'
-		   +'     <td class=""><center>Basic knowledge</center></td>'
+		   +'     <td class=""><center>Basic Knowledge</center></td>'
 		   if(quesPercent<60){
 			htm+= '     <td class=""><center class="NotAttained"> Not Attained</center></td>'   
 		   }else{
@@ -246,14 +246,14 @@ var htm=''
 		+'<br><table class="table table-bordered ">'
 		   +'  <thead class="thead-dark">'
 		   +'    <tr class="">'
-		   +'     <th><center class="">PHASES OF ULTRASONIC LEVEL SENSOR</center></th>'
+		   +'     <th><center class="">COMPETENCY ( APPLICATION )</center></th>'
 		   +'     <th><center class="">STATUS</center></th>'
 //		   +'     <th><center class="">TIME</center></th>'
 		   +'    </tr>'
 		   +' </thead>'
 		   +'  <tbody>'
 		   +'   <tr>'
-		   +'     <td class=""><center>Basic knowledge</center></td>'
+		   +'     <td class=""><center>Basic Knowledge</center></td>'
 		     if(quesPercent<60){
 			htm+= '     <td class=""><center class="NotAttained"> Not Attained</center></td>'   
 		   }else{
@@ -314,7 +314,7 @@ var htm=''
 		+'<div class="col-md-4">'
 		+' <div class="panel panel-danger headingPanel" >'
 		+' <div class="panel-body" id="panelbody">'
-		+'<center><span class="heading1"><b>Basic knowledge</b></span></center>'
+		+'<center><span class="heading1"><b>Basic Knowledge</b></span></center>'
 		+'</div>'
 		+'</div>'		
 		+'<div class="col-md-6">'
@@ -360,7 +360,7 @@ var htm=''
 		+' </div>'
 		+'<div class="col-sm-4">'
 		+' <div class="panel panel-danger headingPanel" >'
-		+' <div class="panel-body" id="panelbody"><center><span class="heading1">Calculation of ultrasonic sensor</span></center></div>'
+		+' <div class="panel-body" id="panelbody"><center><span class="heading1"><b>Calculation of ultrasonic sensor</b></span></center></div>'
 		+'</div>'
 		+'<div class="col-sm-6">'
 		+' <div class="panel panel-danger " style="    margin-bottom: 28px;">'
@@ -411,7 +411,7 @@ var htm=''
 		
 		+'<div class="col-sm-4">'
 		+' <div class="panel panel-danger headingPanel" >'
-		+' <div class="panel-body" id="panelbody"><center><span class="heading1">Calculation of ultrasonic level sensor</span></center></div>'
+		+' <div class="panel-body" id="panelbody"><center><span class="heading1"><b>Calculation of ultrasonic level sensor</b></span></center></div>'
 		+'</div>'
 		+'<div class="col-sm-6">'
 		+' <div class="panel panel-danger " style="    margin-bottom: 28px;">'
@@ -562,6 +562,8 @@ var htm=''
 
 		// Create the pie chart
 		let chart = Highcharts.chart('graph-div', {
+			exporting: { enabled: false },
+				credits: { enabled: false},
 		    chart: {
 		        type: 'pie'
 		    },
