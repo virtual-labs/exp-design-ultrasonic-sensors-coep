@@ -1,0 +1,69 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+	
+      "question": "What type of sensor is used to measure liquid levels in a tank without contact?",
+      "answers": {
+        "a": "Optical sensor",
+        "b": "Ultrasonic level sensor",
+        "c": "Pressure sensor",
+        "d": "Thermal sensor"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+
+	
+    {
+      "question": "Which of the following materials can an ultrasonic sensor detect?",
+      "answers": {
+        "a": "Solids",
+        "b": "Liquids",
+        "c": "Granules and powders",
+        "d": "All of the above"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },	
+ 
+ 
+    {
+      "question": "What is a common application of ultrasonic flow sensors?",
+      "answers": {
+        "a": "Detecting magnetic fields",
+        "b": "Measuring temperature changes",
+        "c": "Regulating the flow rate of liquids and gases",
+        "d": "Calculating electrical resistance"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "Why are non-contact flow sensors preferred in certain applications?",
+      "answers": {
+        "a": "They are cheaper",
+        "b": "They prevent contamination",
+        "c": "They require more moving parts",
+        "d": "They are more complex"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "Ultrasonic sensors are beneficial in object detection due to their ability to detect what type of materials?",
+      "answers": {
+        "a": "Transparent materials",
+        "b": "Only opaque objects",
+        "c": "Only metallic objects",
+        "d": "Only objects with colors"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    }
+	
+ 
+  ]
+}
