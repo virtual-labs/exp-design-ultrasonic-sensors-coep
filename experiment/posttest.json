@@ -3,64 +3,64 @@
   "questions": [
     {
 	
-      "question": "What is the maximum distance that the Ultrasonic Sensor can detect an object?",
+      "question": "What type of sensor is used to measure liquid levels in a tank without contact?",
       "answers": {
-        "a": "8 cm",
-        "b": "20.21 cm",
-        "c": "200 cm",
-        "d": "9 cm"
+        "a": "Optical sensor",
+        "b": "Ultrasonic level sensor",
+        "c": "Pressure sensor",
+        "d": "Thermal sensor"
       },
-      "correctAnswer": "c",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
 
 	
     {
-      "question": "What are the factors that affect the performance of the Ultrasonic Sensor during operation?",
+      "question": "Which of the following materials can an ultrasonic sensor detect?",
       "answers": {
-        "a": "Target Object hidden by fog",
-        "b": "Distant Target Object",
-        "c": "Smoke",
-        "d": "Dust"
+        "a": "Solids",
+        "b": "Liquids",
+        "c": "Granules and powders",
+        "d": "All of the above"
       },
-      "correctAnswer": "b",
+      "correctAnswer": "d",
       "difficulty": "beginner"
     },	
  
  
     {
-      "question": "As the ultrasonic frequency increases",
+      "question": "What is a common application of ultrasonic flow sensors?",
       "answers": {
-        "a": "Velocity of sound increases",
-        "b": "Velocity of sound decreases",
-        "c": "Wave length increases",
-        "d": "Wave length decreases"
-      },
-      "correctAnswer": "d",
-      "difficulty": "beginner"
-    },
-	
-	{
-      "question": "Which of the following is true?",
-      "answers": {
-        "a": "Velocity = wavelength/frequency",
-        "b": "Frequency = velocity × wavelength",
-        "c": "Wavelength = velocity/frequency",
-        "d": "Velocity = wavelength × frequency"
+        "a": "Detecting magnetic fields",
+        "b": "Measuring temperature changes",
+        "c": "Regulating the flow rate of liquids and gases",
+        "d": "Calculating electrical resistance"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
     },
 	
 	{
-      "question": "What is the speed of sound at room temperature in air and the lowest sound frequency the human ear can detect?",
+      "question": "Why are non-contact flow sensors preferred in certain applications?",
       "answers": {
-        "a": "243 m/s and 20 Hz",
-        "b": "243 m/s and 10 Hz",
-        "c": "343 m/s and 20 Hz",
-        "d": "343 m/s and 20 kHz"
+        "a": "They are cheaper",
+        "b": "They prevent contamination",
+        "c": "They require more moving parts",
+        "d": "They are more complex"
       },
-      "correctAnswer": "c",
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "Ultrasonic sensors are beneficial in object detection due to their ability to detect what type of materials?",
+      "answers": {
+        "a": "Transparent materials",
+        "b": "Only opaque objects",
+        "c": "Only metallic objects",
+        "d": "Only objects with colors"
+      },
+      "correctAnswer": "a",
       "difficulty": "beginner"
     }
 	

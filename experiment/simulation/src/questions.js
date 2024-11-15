@@ -123,8 +123,8 @@ var counterArrayJson=[];
 					//	 console.log(data);
 					answerTotCount=ansCount;
 					correctAnswer=ansCount;
-					console.log(correctAnswer+", correctAnsQues= "+answerTotCount); 
-						 $("#modelMsg").html("<b class='boldTextGreen'>Test Submitted Successfully .<br> Number of Correct Answers  : " + ansCount+"</b>");
+					//console.log(correctAnswer+", correctAnsQues= "+answerTotCount); 
+						 $("#modelMsg").html("<b class='boldTextGreen'>Test submitted successfully .<br> Number of correct answers  : " + ansCount+"</b>");
                          $('#nextLevelConfig').prop('hidden',false);
 						 
 						    $('#testSubmit').prop('hidden',true); 

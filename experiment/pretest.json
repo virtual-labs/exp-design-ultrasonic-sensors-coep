@@ -2,64 +2,64 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "What kind of waves does the Ultrasonic Sensor work on?",
+      "question": " What is the primary function of an ultrasonic sensor?",
       "answers": {
-        "a": "Gas",
-        "b": "Heat",
-        "c": "Light",
-        "d": "Sound"
+        "a": "Measure temperature",
+        "b": "Measure distance",
+        "c": "Measure weight",
+        "d": "Measure color"
       },
-      "correctAnswer": "d",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
 
 	
     {
-      "question": "What will happen if we supply a voltage of 25V to the Vcc of the Ultrasonic sensor?",
+      "question": "At what frequency range do ultrasonic sensors operate?",
       "answers": {
-        "a": "Damage is caused",
-        "b": "Sensor will work fine",
-        "c": "Sensor will not respond for the time the voltage is applied",
-        "d": "Sensor will function normally"
+        "a": "Below 10k Hz",
+        "b": "10k - 15k Hz",
+        "c": "Above 20k Hz",
+        "d": "Between 1k - 5k Hz"
       },
-      "correctAnswer": "a",
+      "correctAnswer": "c",
       "difficulty": "beginner"
     },	
  
     {
-      "question": "When we print out the ultrasonic sensor data, what units are they in?",
+      "question": "What are the two main components of an ultrasonic sensor?",
       "answers": {
-        "a": "inches",
-        "b": "centimeters",
-        "c": "feet",
-        "d": "meters"
+        "a": "Transmitter and Speaker",
+        "b": "Microphone and Battery",
+        "c": "Transmitter and Receiver",
+        "d": "Receiver and Battery"
       },
-      "correctAnswer": "b",
+      "correctAnswer": "c",
       "difficulty": "beginner"
     },
   
 	
 	{
-      "question": "An ultrasonic sensor is a device that can measure the ________ to an object by sending out _________ waves.",
+      "question": "What physical property does the ultrasonic sensor utilize to measure distance?",
       "answers": {
-        "a": "density / echo",
-        "b": "distance / sound",
-        "c": "path / seismic",
-        "d": "elevation / sonic"
+        "a": "Speed of light",
+        "b": "Speed of sound",
+        "c": "Magnetic field",
+        "d": "Electrical resistance"
       },
       "correctAnswer": "b",
       "difficulty": "beginner"
     },
 	
 	{
-      "question": "The following objects might not be detected by an ultrasonic sensor.",
+      "question": "In which environment does the speed of sound used in calculations generally apply?",
       "answers": {
-        "a": "hard objects",
-        "b": "large objects",
-        "c": "small objects",
-        "d": "small objects and absorbent object"
+        "a": "Vacuum",
+        "b": "Room-temperature air",
+        "c": "Water",
+        "d": "Solid surfaces"
       },
-      "correctAnswer": "d",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     }
 	

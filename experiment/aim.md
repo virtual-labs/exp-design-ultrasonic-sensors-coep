@@ -1,7 +1,7 @@
 ### Aim 
-Understand working of ultrasonic sensor and its application for level measurement.
+Understand working of ultrasonic sensor and its application for level measurement
 
-### Objective
+### Objectives
 - Understand working of ultrasonic sensor
 - Configure ultrasonic sensor design parameters
 - Calculate ultrasonic sensor time of flight 

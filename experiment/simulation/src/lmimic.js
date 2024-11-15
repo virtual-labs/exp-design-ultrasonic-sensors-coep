@@ -217,7 +217,7 @@ function lmimic(tankHSelect,waterLevelPercent){
 //			console.log("setInterval wavesForLevel = "+wavesForLevel);
 	  		$("#timeAnswerLvl").prop('hidden',false);
 		}else{
-			alert("Click on Inlet Valve to Fill the tank");
+			alert("Click on inlet valve to fill the tank");
 //			$("#modelMsg123").html("<b class='boldTextRed'>Fill the tank </b> ");		
 		}
 	})	

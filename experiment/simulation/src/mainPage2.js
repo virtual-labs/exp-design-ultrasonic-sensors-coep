@@ -124,7 +124,7 @@ function mainPage2(){
 
 	}else{
 		$("#errorPanel").prop("hidden",true);
-		$("#modelMsg123").html("<b class='boldTextGreen'>Configured Successfully</b>");		
+		$("#modelMsg123").html("<b class='boldTextGreen'>Configured successfully</b>");		
 		$("#tankHSelect").prop('hidden',true);
 		$("#WLSelect").prop('disabled',true);
 //		$("#flowRateSelect").prop('disabled',true);
@@ -161,7 +161,7 @@ var timeFormula11='<img src="images/ultrasonicTimeUpdated.png" alt=" " width="35
 					if (id1 <= 2) {
 						if (flowAns == calculateTimeForLvl) {
 							if(tableReading >=3){}else{
-								$("#modelMsg123").html("<b class='boldTextGreen'>Correct Answer. Select another configuration</b>");
+								$("#modelMsg123").html("<b class='boldTextGreen'>Correct answer. Select another configuration</b>");
 							}	
 							//$("#modelMsg123").html("<b class='boldTextGreen'>Correct Answer. Select another configuration.</b>");
 							$("#timeAnswerLvl").prop('hidden',true);
@@ -188,7 +188,7 @@ var timeFormula11='<img src="images/ultrasonicTimeUpdated.png" alt=" " width="35
 //						flow = flowAns.toFixed(2);
 						if (flowAns == calculateTimeForLvl) {
 							if(tableReading >=3){}else{
-								$("#modelMsg123").html("<b class='boldTextGreen'>Correct Answer. Select another configuration</b>");
+								$("#modelMsg123").html("<b class='boldTextGreen'>Correct answer. Select another configuration</b>");
 							}
 							//$("#modelMsg123").html("<b class='boldTextGreen'>Correct Answer. Select another configuration.</b>");
 							$("#timeAnswerLvl").prop('hidden',true);
@@ -200,7 +200,7 @@ var timeFormula11='<img src="images/ultrasonicTimeUpdated.png" alt=" " width="35
 //					$("#submitconfig").prop('disabled',false);
 						} else {
 
-							 $("#modelMsg123").html("<b class='boldTextBlue'>Correct Answer is  " +calculateTimeForLvl+'</b>');
+							 $("#modelMsg123").html("<b class='boldTextBlue'>Correct answer is  " +calculateTimeForLvl+'</b>');
 						}
 					}
 					id1++;
