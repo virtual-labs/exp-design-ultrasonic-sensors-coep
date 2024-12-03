@@ -1,0 +1,68 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": " What is the primary function of an ultrasonic sensor?",
+      "answers": {
+        "a": "Measure temperature",
+        "b": "Measure distance",
+        "c": "Measure weight",
+        "d": "Measure color"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+
+	
+    {
+      "question": "At what frequency range do ultrasonic sensors operate?",
+      "answers": {
+        "a": "Below 10k Hz",
+        "b": "10k - 15k Hz",
+        "c": "Above 20k Hz",
+        "d": "Between 1k - 5k Hz"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },	
+ 
+    {
+      "question": "What are the two main components of an ultrasonic sensor?",
+      "answers": {
+        "a": "Transmitter and Speaker",
+        "b": "Microphone and Battery",
+        "c": "Transmitter and Receiver",
+        "d": "Receiver and Battery"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+  
+	
+	{
+      "question": "What physical property does the ultrasonic sensor utilize to measure distance?",
+      "answers": {
+        "a": "Speed of light",
+        "b": "Speed of sound",
+        "c": "Magnetic field",
+        "d": "Electrical resistance"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "In which environment does the speed of sound used in calculations generally apply?",
+      "answers": {
+        "a": "Vacuum",
+        "b": "Room-temperature air",
+        "c": "Water",
+        "d": "Solid surfaces"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    }
+	
+ 
+  ]
+}

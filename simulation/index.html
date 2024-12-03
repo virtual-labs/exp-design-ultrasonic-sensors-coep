@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title> Ultrasonic Sensor  </title>
+<meta charset="ISO-8859-1">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<!--     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css" > -->
+    <link rel="stylesheet" href=" https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
+   	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/header1.css">
+	<link rel="stylesheet" href="css/mainPage.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/analysis.css">
+
+	<link rel="stylesheet" href="css/transducer.css">
+<!-- 		<link rel="stylesheet" href="css/analysis.css"> -->
+</head>
+
+<style>
+
+.button1 {
+  background-color: #004A7F;
+  -webkit-border-radius: 10px;
+  border-radius: 5px;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial;
+  font-size: 15px; 
+  text-align: center;
+  text-decoration: none;
+  -webkit-animation: glowing 1500ms infinite;
+  -moz-animation: glowing 1500ms infinite;
+  -o-animation: glowing 1500ms infinite;
+  animation: glowing 1500ms infinite;
+}
+@-webkit-keyframes glowing {
+  0% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #B20000; }
+  50% { background-color: #FF0000; -webkit-box-shadow: 0 0 20px #FF0000; }
+  100% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #B20000; }
+}
+
+@-moz-keyframes glowing {
+  0% { background-color: #B20000; -moz-box-shadow: 0 0 3px #B20000; }
+  50% { background-color: #FF0000; -moz-box-shadow: 0 0 40px #FF0000; }
+  100% { background-color: #B20000; -moz-box-shadow: 0 0 3px #B20000; }
+}
+
+@-o-keyframes glowing {
+  0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+  50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
+  100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+}
+
+@keyframes glowing {
+  0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+  50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
+  100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+}
+
+
+</style>
+
+<body bgproperties="fixed">
+
+<header>
+		<img class="Coeplogo" src='images/COEPlogo.png' />
+		<img class="VlabLogo" src='images/vlablogo.jpg' />
+		<span id="colgName">COEP TECHNOLOGICAL UNIVERSITY PUNE</span>		
+		
+	</header>
+
+<br>
+<!--  <div class="row" id="selectMethod" hidden> -->
+<!--  <div class="col-sm-2"></div> -->
+<!--       <div class="col-sm-3" > -->
+<!--        <label class="labelstyle"> Select Measurement Method </label>    -->
+<!--        </div> -->
+<!--       <div class="col-sm-4"> -->
+<!-- 	   <select  class="form-control selectConf" id="methodType"  style="height:auto;"> -->
+<!-- 	   <option value="0">--- Select Method --- </option> -->
+<!-- 	   	<option value="1" >Flow Measurement</option> -->
+<!-- 	   <option value="2">Level Measurement</option> -->
+<!-- 	   </select>          -->
+<!--        </div> -->
+<!--        <div class="col-sm-3"></div> -->
+<!--        </div>   -->
+
+<!-- <div class="slidecontainer" id="waterSlider" hidden> -->
+<!--   <input type="range" min="0" max="100" value="0" class="slider" id="myRange"> -->
+<!--   <p>Value: <span id="demo"></span></p> -->
+<!-- </div> -->
+
+<div class="row " >
+<div class="col-sm-10">
+</div>
+<div class="col-sm-2">
+<button type="button" class="btn btn-danger"   id = "pdfDownload" hidden>
+	  Download Report
+	 
+	</button>
+</div>
+</div>
+
+
+<div  class=" container-fluid" > 
+ <div class="row FirstRowtimer " id="selectMethod" >
+      <div class="col-sm-8">
+      </div>
+<!--      <div class="col-sm-6"  >-->
+<!--       <label class="labelstyle"> Select Accelerometer Type : </label>   -->
+<!--      </div>-->
+<!--      <div class="col-sm-2">-->
+<!--	   <select  class="form-control selectConf" id="methodType"  style="height:auto;" disabled>-->
+<!--	   <option value="0" >--- Select Type --- </option>-->
+<!--	   <option value="1">Capacitive MEMS Accelerometer</option>-->
+<!--	   <option value="2">Piezoelectric Accelerometer</option>-->
+<!--	   </select>         -->
+<!--      </div>-->
+      <div class="col-sm-2">
+      <button type="button" class="btn btn-danger button1" id="btnForModal" data-toggle="modal" data-target="#readProcedureModal"><b>Procedure</b></button> 
+ 	  </div>
+	 
+	  <div class="col-sm-2">
+      <button type="button" class="btn btn-danger" id="simDemo" data-toggle="modal" data-target="#readProcedureModal1"><b>Simulation Demo</b></button> 
+ 	  </div>
+	 
+	 
+ 	  <div class="col-sm-2" style="margin-top: 10px;margin-bottom: 10px" hidden>
+ 		<span  id="hour" class="timer">00</span>:<span id="minute" class="timer">00</span>:<span class="timer" id="second">00</span> 	     	
+ 	  </div>    
+ </div> 
+</div>
+
+
+
+
+  <div id="readProcedureModal1" class="modal fade" role="dialog">
+  <div class="modal-dialog  modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title12" style="color:#fff;">DEMO</h3>
+<!--         <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+      </div>
+      <div class="modal-body12">
+ 
+
+<center><video id="simVideo" width="90%" controls>
+    <source src="images/simulation.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video></center>
+  
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div id="readProcedureModal" class="modal fade" role="dialog">
+  <div class="modal-dialog  modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"><center>PROCEDURE</center></h4>
+      </div>
+      <div class="modal-body">
+    
+
+<center id="modelTitle"> Basic Knowledge </center>
+ <ol>
+	<li>Read and understand all instructions and questions provided</li>
+	<li>Answer all questions and click on the "Submit Test" button</li>
+	<li>Upon successful completion, click on the "Next Level" button which will appear in place of the "Submit" button</li>
+</ol>
+
+<center id="modelTitle">Configuration</center>
+ <ol>
+	<li>	Select frequency, distance, and fluid type</li> 
+	<li> Click on "CHECK CONFIGURATION" button</li>
+	<li> Use the formula and calculate time of flight (ms) and click on submit button</li>
+	<b> Formula: Time = [(Distance * 2) /Speed of Sound] X 1000	</b> <br>	
+	<li> You need to take 6 readings (calculations) by selecting different configurations (frequency, distance and fluid type)</li>
+	<li> After completing 6 readings, click on "GO FOR LEVEL MEASUREMENT" button.</li>
+	<li><b>Configuration for level measurement:</b> Select tank height (cm), and water level for level measurement</li>
+	<li>Click on "CHECK CONFIGURATION" button</li>
+
+</ol>
+
+<center id="modelTitle">Mimic</center>
+
+<ol>
+	<li><b>Fill the Tank: </b>Click the "Inlet" valve to start filling the tank with water</li>
+	<li><b>Start Measurement: </b>Click the "START" button to begin the level measurement process</li>
+	<li><b>Enter Calculated Time: </b>Input the time you calculated earlier in the provided textbox, then click the "SUBMIT" button</li>
+	<li><b>Stop the Measurement: </b>Click the "STOP" button on the mimic frame to stop the measurement</li>
+	<li><b>Repeat and Take 4 Readings: </b>Repeat the measurement steps 4 times, each time taking a new reading</li>
+	<li><b>Finish the Process: </b>After completing 4 readings, click the "RESULT" button to conclude the level measurement process</li>
+</ol>	
+	
+<!-- <center id="modelTitle">Result</center>
+<ol>
+<li>Click on "FINISH" button.</li>
+</ol> -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<br>
+
+<div  class="row container-fluid" id="mainDiv">
+
+<div class="col-lg-6" id="canvas">
+	             <div class="panel panel-primary">
+	      			<div class="panel-heading " id="panelHeading2"><center id="centerText1">ULTRASONIC SENSOR DIAGRAM</center>
+	      			</div>
+<!-- 	      			<label  id="counter"></label> -->
+					<div class="panel-body" id="canvas-btndiv" hidden>
+						<button id="btnAnimStart" class="btn btn-default">START</button>
+						<button id="btnAnimStop" class="btn btn-default">STOP</button>
+					</div>
+	      			<div class="panel-body" id="canvas-div" >
+	      			<img src="images/ultrasonicSensor.png" class="img-fluid " width="100%" height="100%">
+	      			</div>
+
+	   			</div>
+	       </div>
+	<div class="col-lg-6" id="main-div">
+				<div class="panel panel-primary">
+	      			<div class="panel-heading " id="panelHeading1"><center id="centerText2">BASIC KNOWLEDGE</center>
+	      			</div>
+	     			<div class="panel-body" id="main-div-conf">
+
+	     			</div>
+	     			<div class="row" id="tableDesign"> 
+	     			
+	     			</div>
+	   	</div>
+	        
+	  </div>      
+	</div>
+
+<!-- <div  class="row container-fluid" id="mainDiv"> -->
+
+<!-- <div class="col-lg-6" id="main-div"> -->
+<!-- 	             <div class="panel panel-primary"> -->
+<!-- 	      			<div class="panel-heading " id="panelHeading2"><center id="centerText1"> ULTRASONIC SENSOR DIAGRAM</center> -->
+<!-- 	      			</div> -->
+	  
+<!-- 	      			<div class="panel-body" id="canvas-div" > -->
+<!-- 	      			<img src="images/ultrasonicSensor.png" class="img-fluid " width="1000" height="800"> -->
+<!-- 	      			</div> -->
+
+<!-- 	   			</div> -->
+<!-- 	       </div> -->
+<!-- 	<div class="col-lg-6" id="canvas"> -->
+<!-- 				<div class="panel panel-primary"> -->
+<!-- 	      			<div class="panel-heading " id="panelHeading1"><center id="centerText2 ">BASIC KNOWLEDGE</center> -->
+<!-- 	      			</div> -->
+<!-- 	     			<div class="panel-body" id="main-div-conf"> -->
+<!-- <!-- 	     			<script>basicKnowledge();</script> --> 
+<!-- 	     			</div> -->
+<!-- 	     			<div class="row" id="tableDesign"> -->
+	     			
+<!-- 	     			</div> -->
+	     			
+<!-- 	     		</div> -->
+<!-- 	   	</div> -->
+	        
+<!-- 	  </div>       -->
+
+	<footer>
+Copyrights &copy; COEPTECH - Virtual Labs
+</footer>
+<script src="../assets/js/iframeResize.js"></script></body>
+
+<!-- https://code.jquery.com/jquery-3.5.1.js -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="lib/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+<script type="text/javascript" src="lib/raphael.js"></script>
+<script type="text/javascript" src="lib/raphael.min.js"></script>
+<!--   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  
+<!--   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script> -->
+  
+<!--   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  
+  <script type="text/javascript" src="src/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js"></script>
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+
+<script type="text/javascript" src="src/questionJson.js"></script>
+<script type="text/javascript" src="src/questions.js"></script>
+<script type="text/javascript" src="src/mainPage1.js"></script>
+<script type="text/javascript" src="src/animation.js"></script>
+<script type="text/javascript" src="src/table.js"></script>
+<script type="text/javascript" src="src/mainPage2.js"></script> 
+<script type="text/javascript" src="src/lmimic.js"></script>
+<script type="text/javascript" src="src/mainPage3.js"></script>
+<script type="text/javascript" src="src/fmimic.js"></script>
+<script type="text/javascript" src="src/timer.js"></script>
+<script type="text/javascript" src="src/analysis.js"></script>
+
+
+<script>
+$('#readProcedureModal1').click(function(){
+	 $('video').each(function(){
+		    $(this).get(0).pause();
+		  })
+	})
+
+$("#simDemo").on("click", function(){
+	
+	var video = document.getElementById("simVideo");
+
+	// Define the start and end skip times (in seconds)
+	var skipStart = 0;  // Skip the first 5 seconds
+	var skipEnd = 7;    // Skip the last 5 seconds
+
+//	video.onloadedmetadata = function() { 
+	    // Get the duration of the video
+	    var videoDuration = video.duration;
+
+	    // Ensure the video plays between skipStart and (duration - skipEnd)
+	    video.currentTime = skipStart;
+
+	    // Event listener to pause the video when it reaches the end limit (video duration - skipEnd)
+	    video.ontimeupdate = function() {
+	        if (video.currentTime >= videoDuration - skipEnd) {
+	            video.pause();
+				video.currentTime = skipStart;
+	        }
+	    };
+
+	    // Prevent seeking outside the allowed time range
+	    video.addEventListener('seeking', function(event) {
+	        // If seeking before the start time or after the allowed end time, reset the current time
+	        if (video.currentTime < skipStart) {
+	            video.currentTime = skipStart;
+	        } else if (video.currentTime > videoDuration - skipEnd) {
+	            //video.currentTime = videoDuration - skipEnd;
+				video.currentTime = skipStart;
+	        }
+	    });
+//	};
+	
+	video.play();
+})
+
+
+</script>
+
+
+</html>
