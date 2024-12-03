@@ -6,7 +6,7 @@ An ultrasonic sensor is an instrument that measures the distance to an object us
 
 In addition to sending a pulse, a transducer can receive an echo as well. The transmitter of the module transmits an ultrasonic sound. This sound will be reflected if an object (like solids, liquids, granules, and powders) is present in front of the ultrasonic sensor. The reflected sound is received by the receiver present in the same module. The sensor determines the distance to a target by measuring time lapses between the sending and receiving of the ultrasonic pulse. By calculating the travel time and the speed of sound, the distance can be calculated.
 
-Using the room-temperature speed of sound in air, 343 m/s, we can quickly find the distance, keeping in mind that the noise travels in both directions—to and from the target. As a result, we get the following velocity-time equation -
+Using the room-temperature speed of sound in air, 343 m/s, we can quickly find the distance, The noise travels in both directions, towards the target and away from it. As a result, we get the following velocity-time equation -
 
 	Time = [(Distance * 2) /Speed of Sound] X 1000
 
